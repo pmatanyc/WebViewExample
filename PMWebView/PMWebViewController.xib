@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMWebViewController">
+            <connections>
+                <outlet property="urlTextField" destination="kL2-Br-bCe" id="JwY-Tp-2y3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="sh3-nN-YBv" id="eXF-I2-m1a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <webView appearanceType="aqua" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-nN-YBv">
+                    <rect key="frame" x="0.0" y="72" width="768" height="952"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                </webView>
+                <toolbar appearanceType="aqua" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-hm-LfK">
+                    <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <items>
+                        <barButtonItem systemItem="rewind" id="sBo-Gg-uCU">
+                            <connections>
+                                <action selector="goBack" destination="sh3-nN-YBv" id="5hL-gb-2jC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="fastForward" id="5C0-mU-5IL">
+                            <connections>
+                                <action selector="goForward" destination="sh3-nN-YBv" id="F0a-DC-GpE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="refresh" id="IWx-eR-hhr">
+                            <connections>
+                                <action selector="reload" destination="sh3-nN-YBv" id="erT-5d-bLT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="stop" id="1uC-5b-T9c">
+                            <connections>
+                                <action selector="stopLoading" destination="sh3-nN-YBv" id="Fy5-aa-A8g"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Home" id="Sfu-yS-mOj">
+                            <connections>
+                                <action selector="home:" destination="-1" id="ZuO-hE-Q0a"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="Z97-F6-4D4">
+                            <textField key="customView" appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www." minimumFontSize="17" clearButtonMode="whileEditing" id="kL2-Br-bCe">
+                                <rect key="frame" x="196" y="7" width="500" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="urlEntered:" destination="-1" eventType="editingDidEnd" id="Vns-HA-vBA"/>
+                                </connections>
+                            </textField>
+                        </barButtonItem>
+                        <barButtonItem title="Test" id="6MV-yd-1rI">
+                            <connections>
+                                <action selector="jsTest:" destination="-1" id="5fb-Nn-BbA"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sh3-nN-YBv" firstAttribute="top" secondItem="ff6-hm-LfK" secondAttribute="bottom" id="EsC-Jr-GWJ"/>
+                <constraint firstAttribute="trailing" secondItem="ff6-hm-LfK" secondAttribute="trailing" id="WZd-Jg-hnB"/>
+                <constraint firstItem="sh3-nN-YBv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aFm-JK-84B"/>
+                <constraint firstAttribute="trailing" secondItem="sh3-nN-YBv" secondAttribute="trailing" id="b9k-IK-6zK"/>
+                <constraint firstItem="ff6-hm-LfK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="nbh-lw-Pqg"/>
+                <constraint firstItem="ff6-hm-LfK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t0p-jj-nY5"/>
+                <constraint firstAttribute="bottom" secondItem="sh3-nN-YBv" secondAttribute="bottom" id="uRU-GD-xYv"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>

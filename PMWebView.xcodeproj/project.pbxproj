@@ -19,6 +19,9 @@
 		B2C6332E197D9E60007D0487 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C63316197D9E60007D0487 /* UIKit.framework */; };
 		B2C63336197D9E60007D0487 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C63334197D9E60007D0487 /* InfoPlist.strings */; };
 		B2C63338197D9E60007D0487 /* PMWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C63337197D9E60007D0487 /* PMWebViewTests.m */; };
+		B2C63349197DC312007D0487 /* PMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C63346197DC312007D0487 /* PMWebViewController.m */; };
+		B2C6334A197DC312007D0487 /* PMWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C63347197DC312007D0487 /* PMWebViewController.xib */; };
+		B2C6334C197DF8DF007D0487 /* JSSample.html in Resources */ = {isa = PBXBuildFile; fileRef = B2C6334B197DF8DF007D0487 /* JSSample.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		B2C63333197D9E60007D0487 /* PMWebViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PMWebViewTests-Info.plist"; sourceTree = "<group>"; };
 		B2C63335197D9E60007D0487 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2C63337197D9E60007D0487 /* PMWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMWebViewTests.m; sourceTree = "<group>"; };
+		B2C63346197DC312007D0487 /* PMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMWebViewController.m; sourceTree = "<group>"; };
+		B2C63347197DC312007D0487 /* PMWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMWebViewController.xib; sourceTree = "<group>"; };
+		B2C63348197DC312007D0487 /* PMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMWebViewController.h; sourceTree = "<group>"; };
+		B2C6334B197DF8DF007D0487 /* JSSample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JSSample.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +116,9 @@
 			children = (
 				B2C63321197D9E60007D0487 /* PMAppDelegate.h */,
 				B2C63322197D9E60007D0487 /* PMAppDelegate.m */,
+				B2C63348197DC312007D0487 /* PMWebViewController.h */,
+				B2C63346197DC312007D0487 /* PMWebViewController.m */,
+				B2C63347197DC312007D0487 /* PMWebViewController.xib */,
 				B2C63324197D9E60007D0487 /* Images.xcassets */,
 				B2C63319197D9E60007D0487 /* Supporting Files */,
 			);
@@ -118,6 +128,7 @@
 		B2C63319197D9E60007D0487 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2C6334B197DF8DF007D0487 /* JSSample.html */,
 				B2C6331A197D9E60007D0487 /* PMWebView-Info.plist */,
 				B2C6331B197D9E60007D0487 /* InfoPlist.strings */,
 				B2C6331E197D9E60007D0487 /* main.m */,
@@ -219,8 +230,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C6334A197DC312007D0487 /* PMWebViewController.xib in Resources */,
 				B2C6331D197D9E60007D0487 /* InfoPlist.strings in Resources */,
 				B2C63325197D9E60007D0487 /* Images.xcassets in Resources */,
+				B2C6334C197DF8DF007D0487 /* JSSample.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C6331F197D9E60007D0487 /* main.m in Sources */,
+				B2C63349197DC312007D0487 /* PMWebViewController.m in Sources */,
 				B2C63323197D9E60007D0487 /* PMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +453,7 @@
 				B2C6333D197D9E60007D0487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2C6333E197D9E60007D0487 /* Build configuration list for PBXNativeTarget "PMWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +462,7 @@
 				B2C63340197D9E60007D0487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

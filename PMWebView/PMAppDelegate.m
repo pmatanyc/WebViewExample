@@ -7,6 +7,7 @@
 //
 
 #import "PMAppDelegate.h"
+#import "PMWebViewController.h"
 
 @implementation PMAppDelegate
 
@@ -14,6 +15,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    UIViewController *webvc = [[PMWebViewController alloc]initWithNibName:@"PMWebViewController" bundle:nil];
+    self.window.rootViewController = webvc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
